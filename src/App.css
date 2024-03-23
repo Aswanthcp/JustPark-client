@@ -1,7 +1,6 @@
 .app-container{
   width: 100%;
+  margin: 0;
+  padding: 0;
 
-}
-.content{
-  padding:0 10px;
 }

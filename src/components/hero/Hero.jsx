@@ -40,7 +40,7 @@ const Hero = () => {
         </div>
         <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
           <img
-            src="https://akaatent.com/wp-content/uploads/2017/05/car-parking-shade-bottom-support-perspective-view.png"
+            src="images/carhero.png"
             alt="mockup"
           />
         </div>

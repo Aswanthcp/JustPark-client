@@ -18,6 +18,7 @@ import Footer from "./components/footer/Footer";
 import Home from "./pages/landingPage/Home";
 import ParkingPlacePage from "./pages/parkingPlacesPages/ParkingPlace";
 import UserProfile from "./pages/userProfile/UserProfile";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   const token = useSelector((state) => state.token);
@@ -77,6 +78,7 @@ function App() {
         </Routes>
       </div>
       <Footer />
+      <ToastContainer />
     </div>
   );
 }

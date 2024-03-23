@@ -20,7 +20,8 @@ import {
 import { PersistGate } from "redux-persist/integration/react";
 import storage from "redux-persist/lib/storage";
 import { BrowserRouter } from "react-router-dom";
-// import { DarkModeContextProvider } from "./context/darkModeContext";
+import "react-toastify/dist/ReactToastify.css";
+
 
 const persistConfig = { key: "client", storage, version: 1 };
 const persistedReducer = persistReducer(persistConfig, authReducer);
@@ -44,4 +45,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       </React.StrictMode>
     </PersistGate>
   </Provider>
+  
 );

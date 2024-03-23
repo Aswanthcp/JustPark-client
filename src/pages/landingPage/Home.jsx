@@ -10,21 +10,29 @@ import.meta.env.google_map_api;
 
 const ParkingPlace = ({ parkingplace }) => (
   <Link to={`/viewing/${parkingplace.id}`} className="text-blue-500">
-    <div className="border rounded overflow-hidden shadow-md transform transition-transform hover:scale-105">
-      <div className="h-48 overflow-hidden">
-        <img
-          src="https://thearchitectsdiary.com/wp-content/uploads/2020/10/Parking-101-Creating-the-Perfect-Car-Park.jpg"
-          alt="Parking Place Image"
-          className="object-cover w-full h-full"
-        />
-      </div>
+    <div className="w-[300px] border rounded overflow-hidden shadow-md transform transition-transform hover:scale-105">
+      <img
+        src="https://thearchitectsdiary.com/wp-content/uploads/2020/10/Parking-101-Creating-the-Perfect-Car-Park.jpg"
+        alt="Laptop"
+        className="h-[200px] w-full rounded-md object-cover"
+      />
       <div className="p-4">
-        <h2 className="text-xl font-bold mb-2">{parkingplace.name}</h2>
+        <h1 className="text-lg font-semibold capitalize">{parkingplace.name}</h1>
+        <p className="mt-3 text-sm text-gray-600">
+          {parkingplace.description
+            ? parkingplace.description
+            : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturidebitis?"}
+        </p>
         <p className="text-lg text-green-500 mb-2">₹50.00</p>
-        <p className="text-gray-700">{parkingplace.description}</p>
-        <button className="btn-blue mt-4">View Details</button>
+        <button
+          type="button"
+          className="mt-4 rounded-sm bg-black px-2.5 py-1 text-[10px] font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+        >
+         View Details
+        </button>
       </div>
     </div>
+   
   </Link>
 );
 
@@ -45,27 +53,19 @@ const Home = () => {
   }, []);
   return (
     <>
-      <div>
+      <div className="w-full">
         <div>
-          {/* <LoadScript
-            googleMapsApiKey={import.meta.env.google_map_api}
-            libraries={libraries}
-          >
-            <GoogleMap
-              mapContainerStyle={mapContainerStyle}
-              zoom={10}
-              center={center}
-            ></GoogleMap>
-          </LoadScript> */}
           <Hero />
         </div>
-        <h1 className="text-3xl text-gray-400 font-semibold  mb-5 mt-5 uppercase dark:text-white">
-          Parking Places
-        </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-          {parkingplaces.map((parkingplace) => (
-            <ParkingPlace key={parkingplace.id} parkingplace={parkingplace} />
-          ))}
+        <div className="m-4">
+          <h1 className="text-3xl text-gray-700 text-4xl font-semibold tracking-tight leading-none mb-5 mt-5 uppercase dark:text-white">
+            Parking Places
+          </h1>
+          <div className="p-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            {parkingplaces.map((parkingplace) => (
+              <ParkingPlace key={parkingplace.id} parkingplace={parkingplace} />
+            ))}
+          </div>
         </div>
       </div>
     </>

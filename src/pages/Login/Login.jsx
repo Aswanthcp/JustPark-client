@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "../../utils/axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
 import { userLogin } from "../../utils/Constants";
@@ -81,7 +81,7 @@ const Login = () => {
         <Toaster position="top-center" reverseOrder={false}></Toaster>
         <div className="xl:mx-auto xl:w-full xl:max-w-sm 2xl:max-w-md">
           <h2 className="text-center text-2xl font-bold leading-tight text-black">
-            ADMIN LOGIN
+            LOGIN
           </h2>
 
           <form method="POST" className="mt-8" onSubmit={formik.handleSubmit}>
@@ -146,6 +146,17 @@ const Login = () => {
               </div>
             </div>
           </form>
+          <p className="text-sm font-light text-gray-500 dark:text-gray-400 mt-4">
+            Don’t have an account yet?{" "}
+            <Link to="/signup">
+              <span
+                href="#"
+                className="font-medium text-primary-600 hover:underline dark:text-primary-500"
+              >
+                Sign up
+              </span>
+            </Link>
+          </p>
         </div>
         <ToastContainer />
       </div>

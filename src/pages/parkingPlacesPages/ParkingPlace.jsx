@@ -8,19 +8,26 @@ import.meta.env.google_map_api;
 
 const ParkingPlace = ({ parkingplace }) => (
   <Link to={`/viewing/${parkingplace.id}`} className="text-blue-500">
-    <div className="border rounded overflow-hidden shadow-md transform transition-transform hover:scale-105">
-      <div className="h-48 overflow-hidden">
-        <img
-          src="https://thearchitectsdiary.com/wp-content/uploads/2020/10/Parking-101-Creating-the-Perfect-Car-Park.jpg"
-          alt="Parking Place Image"
-          className="object-cover w-full h-full"
-        />
-      </div>
+    <div className="w-[300px] border rounded overflow-hidden shadow-md transform transition-transform hover:scale-105">
+      <img
+        src="https://thearchitectsdiary.com/wp-content/uploads/2020/10/Parking-101-Creating-the-Perfect-Car-Park.jpg"
+        alt="Laptop"
+        className="h-[200px] w-full rounded-md object-cover"
+      />
       <div className="p-4">
-        <h2 className="text-xl font-bold mb-2">{parkingplace.name}</h2>
+        <h1 className="text-lg font-semibold capitalize">{parkingplace.name}</h1>
+        <p className="mt-3 text-sm text-gray-600">
+          {parkingplace.address
+            ? parkingplace.address
+            : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturidebitis?"}
+        </p>
         <p className="text-lg text-green-500 mb-2">₹50.00</p>
-        <p className="text-gray-700">{parkingplace.description}</p>
-        <button className="btn-blue mt-4">View Details</button>
+        <button
+          type="button"
+          className="mt-4 rounded-sm bg-black px-2.5 py-1 text-[10px] font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+        >
+          View Details
+        </button>
       </div>
     </div>
   </Link>
