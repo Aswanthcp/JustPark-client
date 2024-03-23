@@ -17,6 +17,10 @@ const menuItems = [
     name: "Reservations",
     to: "/reservation",
   },
+  {
+    name: "about",
+    to: "/about",
+  },
 ];
 
 export function Navbar() {
