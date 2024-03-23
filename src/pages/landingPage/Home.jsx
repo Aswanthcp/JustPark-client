@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 import { GoogleMap, LoadScript } from "@react-google-maps/api";
 import { get_parkingPlace } from "../../utils/Constants";
+import Hero from "../../components/hero/Hero";
 
 import.meta.env.google_map_api;
 
@@ -44,9 +45,9 @@ const Home = () => {
   }, []);
   return (
     <>
-      <div className="p-4">
-        <div className="mb-4">
-          <LoadScript
+      <div>
+        <div>
+          {/* <LoadScript
             googleMapsApiKey={import.meta.env.google_map_api}
             libraries={libraries}
           >
@@ -55,7 +56,8 @@ const Home = () => {
               zoom={10}
               center={center}
             ></GoogleMap>
-          </LoadScript>
+          </LoadScript> */}
+          <Hero />
         </div>
         <h1 className="text-3xl text-gray-400 font-semibold  mb-5 mt-5 uppercase dark:text-white">
           Parking Places

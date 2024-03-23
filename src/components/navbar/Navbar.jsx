@@ -47,7 +47,7 @@ export function Navbar() {
                 alt="Logo"
               />
             </span>
-            <span className="font-bold capitilize">justPark</span>
+            <span className="font-bold capitilize">JUSTPARK</span>
           </div>
         </Link>
         <div className="hidden lg:block">
