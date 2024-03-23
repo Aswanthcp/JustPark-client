@@ -40,7 +40,7 @@ const Hero = () => {
         </div>
         <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
           <img
-            src="https://just-park-client.vercel.app/images/carhero.png"
+            src="https://just-park-client.vercel.app/images/car-parking-shade-bottom-support-perspective-view.png"
             alt="mockup"
           />
         </div>
