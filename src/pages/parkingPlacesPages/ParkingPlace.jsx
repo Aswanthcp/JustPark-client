@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 
 import { get_parkingPlace } from "../../utils/Constants";
 
-import.meta.env.google_map_api;
-
 const ParkingPlace = ({ parkingplace }) => (
   <Link to={`/viewing/${parkingplace.id}`} className="text-blue-500">
     <div className="w-[300px] border rounded overflow-hidden shadow-md transform transition-transform hover:scale-105">
@@ -15,7 +13,9 @@ const ParkingPlace = ({ parkingplace }) => (
         className="h-[200px] w-full rounded-md object-cover"
       />
       <div className="p-4">
-        <h1 className="text-lg font-semibold capitalize">{parkingplace.name}</h1>
+        <h1 className="text-lg font-semibold capitalize">
+          {parkingplace.name}
+        </h1>
         <p className="mt-3 text-sm text-gray-600">
           {parkingplace.address
             ? parkingplace.address
@@ -38,7 +38,7 @@ const ParkingPlacePage = () => {
 
   useEffect(() => {
     axios
-      .get(`${get_parkingPlace}`)
+      .get(get_parkingPlace)
       .then((response) => {
         setparkingplaces(response.data);
       })
