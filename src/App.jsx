@@ -19,6 +19,7 @@ import Home from "./pages/landingPage/Home";
 import ParkingPlacePage from "./pages/parkingPlacesPages/ParkingPlace";
 import UserProfile from "./pages/userProfile/UserProfile";
 import { ToastContainer } from "react-toastify";
+import AboutMePage from "./pages/Misc/AboutMePage";
 
 function App() {
   const token = useSelector((state) => state.token);
@@ -39,6 +40,7 @@ function App() {
           <Route path="/signup" exact element={<Signup />} />
           <Route path="/places" exact element={<ParkingPlacePage />} />
           <Route path="/" exact element={<Home />} />
+          <Route path="/aboutme" exact element={<AboutMePage />} />
           <Route
             path="/profile"
             exact
@@ -58,7 +60,7 @@ function App() {
             }
           />
           <Route
-            path="/booking/:id"
+            path="/booking/:placeId/:slotNumber"
             exact
             element={
               <ProtectedRoute>
@@ -77,6 +79,7 @@ function App() {
           />
         </Routes>
       </div>
+      <hr className="my-8  border-gray-200" />
       <Footer />
       <ToastContainer />
     </div>

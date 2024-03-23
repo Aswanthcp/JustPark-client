@@ -1,5 +1,5 @@
-// export const baseUrl = "http://127.0.0.1:8000/api/";
-export const baseUrl = "https://justpark-backend.onrender.com/api/";
+export const baseUrl = "http://127.0.0.1:8000/api/";
+// export const baseUrl = "https://justpark-backend.onrender.com/api/";
 
 export const userLogin = "login/";
 export const userSignUP = "signup/";
@@ -9,3 +9,5 @@ export const create_Checkout_Session = "create-checkout-session/";
 export const getReservations = "getReservations/";
 export const get_parkingPlace = "get_parkingPlace/";
 export const get_parkingSlot_byplace = "get-parkingSlot-byplace/";
+export const getParkingSLotby_PlaceId_SlotNumber =
+  "getParkingSLotby-PlaceId-SlotNumber/";

@@ -37,7 +37,7 @@ const ParkingSlot = () => {
                 <span>{slot.slot_number}</span>
               ) : (
                 <Link
-                  to={`/booking/${slot.slot_number}`}
+                  to={`/booking/${id}/${slot.slot_number}`}
                   className="text-white"
                 >
                   {slot.slot_number}

@@ -19,7 +19,7 @@ const menuItems = [
   },
   {
     name: "about",
-    to: "/about",
+    to: "/aboutme",
   },
 ];
 

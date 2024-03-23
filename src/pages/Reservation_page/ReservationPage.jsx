@@ -30,10 +30,6 @@ const ReservationPage = () => {
       year: "numeric",
       month: "long",
       day: "numeric",
-      hour: "numeric",
-      minute: "numeric",
-      second: "numeric",
-      timeZoneName: "short",
     };
     return new Date(timeString).toLocaleString(undefined, options);
   };
@@ -52,6 +48,8 @@ const ReservationPage = () => {
           <table className="min-w-full bg-white border border-gray-300 shadow-md rounded-md overflow-hidden">
             <thead>
               <tr className="bg-gray-100">
+                <th className="py-2 px-4 border-b">Place</th>
+                <th className="py-2 px-4 border-b">Slot Number</th>
                 <th className="py-2 px-4 border-b">Reservation Time</th>
                 <th className="py-2 px-4 border-b">User Name</th>
                 <th className="py-2 px-4 border-b">Car Number</th>
@@ -62,6 +60,8 @@ const ReservationPage = () => {
             <tbody>
               {reservation.map((res) => (
                 <tr key={res.id} className="hover:bg-gray-50 text-center">
+                  <td className="py-2 px-4 border-b">{res.slot.place.name}</td>
+                  <td className="py-2 px-4 border-b">{res.slot.slot_number}</td>
                   <td className="py-2 px-4 border-b">
                     {formatReservationTime(res.reservation_time)}
                   </td>
