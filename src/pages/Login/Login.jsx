@@ -67,21 +67,21 @@ const Login = () => {
             if (status === 400) {
               toast.error("Check Your Credentials", {
                 position: toast.POSITION.TOP_RIGHT,
-                autoClose: 15000,
+                autoClose: 3000,
               });
               // Handle other errors as needed
             } else if (status === 500) {
               toast.error("Check Your Credentials", {
-                autoClose: 15000,
+                autoClose: 3000,
               });
             } else if (status === 401) {
               toast.error("Check Your Credentials", {
-                autoClose: 15000,
+                autoClose: 3000,
               });
             } else {
               setError("Network Error");
               toast.error("Network error", {
-                autoClose: 15000,
+                autoClose: 3000,
               });
             }
           }
