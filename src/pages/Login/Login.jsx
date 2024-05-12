@@ -52,11 +52,10 @@ const Login = () => {
           const { data } = response;
 
           dispatch(setLogin({ client: data.data, token: data.user_jwt }));
-          navigate("/");
 
-          toast.success("Login successful!", {
-            position: toast.POSITION.TOP_RIGHT,
-            autoClose: 1000,
+          navigate("/");
+          toast.success("Login Successfully !!", {
+            autoClose: 3000,
           });
         })
         .catch((error) => {
@@ -66,7 +65,6 @@ const Login = () => {
 
             if (status === 400) {
               toast.error("Check Your Credentials", {
-                position: toast.POSITION.TOP_RIGHT,
                 autoClose: 3000,
               });
               // Handle other errors as needed
@@ -173,7 +171,7 @@ const Login = () => {
             </Link>
           </p>
         </div>
-        <ToastContainer />
+        <ToastContainer autoClose={3000} />
       </div>
     </section>
   );
