@@ -53,10 +53,11 @@ const Login = () => {
 
           dispatch(setLogin({ client: data.data, token: data.user_jwt }));
 
-          navigate("/");
-          toast.success("Login Successfully !!", {
+          toast.success("Login successful!", {
             autoClose: 3000,
           });
+
+          navigate("/");
         })
         .catch((error) => {
           if (error.response) {
@@ -171,7 +172,6 @@ const Login = () => {
             </Link>
           </p>
         </div>
-        <ToastContainer autoClose={3000} />
       </div>
     </section>
   );

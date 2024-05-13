@@ -8,7 +8,7 @@ import {
 import "./App.css";
 import Navbar from "./components/navbar/Navbar";
 import { useSelector } from "react-redux";
-
+import "react-toastify/dist/ReactToastify.css";
 import ParkingSlot from "./pages/ParkingSlotPage/ParkingSlot";
 import ParkingBooking from "./pages/ParkingBookingSlotPages/ParkingBooking";
 import Login from "./pages/Login/Login";
